@@ -1,0 +1,145 @@
+{
+  "watchlist": [
+
+    {
+      "symbol": "AAPL",
+      "name": "Apple",
+      "sector": "Technology",
+      "type": "Stock"
+    },
+
+    {
+      "symbol": "AMZN",
+      "name": "Amazon",
+      "sector": "Consumer Discretionary",
+      "type": "Stock"
+    },
+
+    {
+      "symbol": "NVDA",
+      "name": "NVIDIA",
+      "sector": "Technology",
+      "type": "Stock"
+    },
+
+    {
+      "symbol": "MSFT",
+      "name": "Microsoft",
+      "sector": "Technology",
+      "type": "Stock"
+    },
+
+    {
+      "symbol": "META",
+      "name": "Meta Platforms",
+      "sector": "Technology",
+      "type": "Stock"
+    },
+
+    {
+      "symbol": "GOOGL",
+      "name": "Alphabet",
+      "sector": "Technology",
+      "type": "Stock"
+    },
+
+    {
+      "symbol": "TSLA",
+      "name": "Tesla",
+      "sector": "Automotive",
+      "type": "Stock"
+    },
+
+    {
+      "symbol": "AMD",
+      "name": "Advanced Micro Devices",
+      "sector": "Semiconductors",
+      "type": "Stock"
+    },
+
+    {
+      "symbol": "AVGO",
+      "name": "Broadcom",
+      "sector": "Semiconductors",
+      "type": "Stock"
+    },
+
+    {
+      "symbol": "MU",
+      "name": "Micron",
+      "sector": "Semiconductors",
+      "type": "Stock"
+    },
+
+    {
+      "symbol": "PLTR",
+      "name": "Palantir",
+      "sector": "AI Software",
+      "type": "Stock"
+    },
+
+    {
+      "symbol": "TSM",
+      "name": "Taiwan Semiconductor",
+      "sector": "Semiconductors",
+      "type": "Stock"
+    },
+
+    {
+      "symbol": "NFLX",
+      "name": "Netflix",
+      "sector": "Entertainment",
+      "type": "Stock"
+    },
+
+    {
+      "symbol": "QQQ",
+      "name": "Nasdaq 100 ETF",
+      "sector": "Index ETF",
+      "type": "ETF"
+    },
+
+    {
+      "symbol": "SPY",
+      "name": "S&P 500 ETF",
+      "sector": "Index ETF",
+      "type": "ETF"
+    },
+
+    {
+      "symbol": "DIA",
+      "name": "Dow Jones ETF",
+      "sector": "Index ETF",
+      "type": "ETF"
+    },
+
+    {
+      "symbol": "IWM",
+      "name": "Russell 2000 ETF",
+      "sector": "Small Cap ETF",
+      "type": "ETF"
+    },
+
+    {
+      "symbol": "VIX",
+      "name": "Volatility Index",
+      "sector": "Market Risk",
+      "type": "Index"
+    },
+
+    {
+      "symbol": "GLD",
+      "name": "Gold ETF",
+      "sector": "Commodity",
+      "type": "ETF"
+    },
+
+    {
+      "symbol": "SLV",
+      "name": "Silver ETF",
+      "sector": "Commodity",
+      "type": "ETF"
+    }
+
+  ]
+}
