@@ -1,0 +1,34 @@
+{
+  "ladder": [
+    {
+      "symbol": "NVDA",
+      "direction": "CALL",
+      "score": 96,
+      "trend": "Bullish",
+      "setup": "Breakout",
+      "risk": "Low",
+      "status": "READY",
+      "entry": "",
+      "stop": "",
+      "target1": "",
+      "target2": "",
+      "target3": "",
+      "ai": "Above trend indicators with strong momentum."
+    },
+    {
+      "symbol": "AAPL",
+      "direction": "CALL",
+      "score": 94,
+      "trend": "Bullish",
+      "setup": "EMA Bounce",
+      "risk": "Low",
+      "status": "WATCH",
+      "entry": "",
+      "stop": "",
+      "target1": "",
+      "target2": "",
+      "target3": "",
+      "ai": "Trend continuation setup."
+    }
+  ]
+}
