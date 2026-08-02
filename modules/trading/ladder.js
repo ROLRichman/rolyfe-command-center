@@ -1,40 +1,194 @@
-// RO'Lyfe Option & Stock Ladder™
-// Loads AI ranked opportunities from data/ladder.json
+/* ==========================================
+   RO'LYFE OPTION & STOCK LADDER™
+   Intelligence Display Engine
+========================================== */
 
 
-document.addEventListener("DOMContentLoaded", function () {
+function loadLadder(){
+
+
+    let data = localStorage.getItem(
+        "rolyfeScanner"
+    );
+
+
+    let results =
+    data
+    ?
+    JSON.parse(data)
+    :
+    [];
+
+
+
+    displayLadder(results);
+
+
+}
+
+
+
+/*
+ DISPLAY LADDER RESULTS
+*/
+
+function displayLadder(results){
+
+
+    let table =
+    document.getElementById(
+    "ladder-results"
+    );
+
+
+
+    if(!table){
+
+        return;
+
+    }
+
+
+
+    table.innerHTML="";
+
+
+
+    results
+    .sort(
+        (a,b)=>
+        b.score-a.score
+    )
+    .forEach(stock=>{
+
+
+        table.innerHTML += `
+
+        <tr>
+
+        <td>
+        ${stock.symbol}
+        </td>
+
+
+        <td>
+        ${stock.direction}
+        </td>
+
+
+        <td>
+
+        <span class="score">
+
+        ${stock.score}
+
+        </span>
+
+        </td>
+
+
+        <td>
+        ${stock.trend}
+        </td>
+
+
+        <td>
+        ${stock.setup}
+        </td>
+
+
+        <td>
+        ${stock.risk}
+        </td>
+
+
+        <td>
+        ${stock.status}
+        </td>
+
+
+        <td>
+
+        <button onclick="showAI('${stock.symbol}')">
+
+        🤖 AI
+
+        </button>
+
+        </td>
+
+
+        </tr>
+
+        `;
+
+
+    });
+
+
+}
+
+
+
+/*
+ AI POPUP
+*/
+
+function showAI(symbol){
+
+
+    let results =
+    JSON.parse(
+        localStorage.getItem(
+        "rolyfeScanner"
+        )
+    );
+
+
+
+    let stock =
+    results.find(
+        item =>
+        item.symbol === symbol
+    );
+
+
+
+    if(stock){
+
+
+        alert(
+
+        "RO'Lyfe AI Analysis\n\n"
+
+        +
+
+        stock.ai
+
+        );
+
+    }
+
+
+}
+
+
+
+/*
+ START LADDER
+*/
+
+document.addEventListener(
+
+"DOMContentLoaded",
+
+()=>{
 
 loadLadder();
 
-});
+}
 
-
-
-async function loadLadder() {
-
-try {
-
-
-const response = await fetch("../../data/ladder.json");
-
-
-const data = await response.json();
-
-
-const ladder = data.ladder;
-
-
-const container = document.getElementById("ladder-results");
-
-
-if (!container) return;
-
-
-
-container.innerHTML = "";
-
-
-
+);
 ladder.forEach((stock, index) => {
 
 
