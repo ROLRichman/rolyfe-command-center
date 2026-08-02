@@ -15,71 +15,144 @@
 
 <body>
 
+
 <div class="trading-container">
+
 
 
 <header>
 
-<h1>📈 RO'Lyfe Trading Center</h1>
+<h1>
+📈 RO'Lyfe Trading Center™
+</h1>
+
 
 <p>
 Market Intelligence • Options • Stocks • AI Analysis • Risk Management
 </p>
 
+
 </header>
 
 
+
+
+<!-- CLOCK -->
+
 <section class="market-strip">
 
+
 <div>
-🕒 Market Time:
-<span id="market-time">Loading...</span>
+🕒 Time:
+<span id="market-time">
+Loading...
+</span>
 </div>
+
+
 
 <div>
 📅 Date:
-<span id="market-date">Loading...</span>
+<span id="market-date">
+Loading...
+</span>
 </div>
+
+
 
 </section>
 
 
 
+
+
+<!-- MARKET TICKER -->
+
+<section class="ticker-container">
+
+
+<h2>
+🌐 Market Intelligence Strip
+</h2>
+
+
+<div id="market-ticker">
+
+Loading market data...
+
+</div>
+
+
+</section>
+
+
+
+
+
+
+<!-- OPTION LADDER -->
+
 <section class="module-card">
 
-<h2>🪜 RO'Lyfe Option & Stock Ladder™</h2>
+
+<h2>
+🪜 RO'Lyfe Option & Stock Ladder™
+</h2>
+
 
 <p>
+
 AI ranked stock and option opportunities.
-Scores setups using trend, momentum, risk, volume, and market conditions.
+
+Scores setups using:
+
+Trend • Momentum • Risk • Volume • Market Conditions
+
 </p>
+
 
 
 <a href="ladder.html">
 
 <button>
+
 🪜 Open Option & Stock Ladder
+
 </button>
 
 </a>
+
 
 </section>
 
 
 
 
+
+
+
+<!-- AI SCANNER -->
+
+
 <section class="module-card">
 
-<h2>🤖 RO'Lyfe AI Market Scanner</h2>
+
+<h2>
+🤖 RO'Lyfe AI Market Scanner
+</h2>
+
 
 <p>
-Analyzes your watchlist and ranks opportunities using the RO'Lyfe scoring system.
+
+Analyzes the watchlist and ranks opportunities using the RO'Lyfe scoring engine.
+
 </p>
+
 
 
 <div id="scanner-results">
 
-Loading scanner results...
+Loading scanner...
 
 </div>
 
@@ -90,9 +163,18 @@ Loading scanner results...
 
 
 
+
+
+<!-- WATCHLIST -->
+
+
 <section class="module-card">
 
-<h2>📊 Primary Watchlist</h2>
+
+<h2>
+📊 Primary Watchlist
+</h2>
+
 
 
 <div id="watchlist">
@@ -108,18 +190,26 @@ Loading watchlist...
 
 
 
+
+
+
+<!-- TRADING RULES -->
+
+
 <section class="module-card">
 
-<h2>🧠 RO'Lyfe Trading Rules</h2>
+
+<h2>
+🧠 RO'Lyfe Trading Rules
+</h2>
+
 
 
 <ul>
 
-<li>✅ Trend Direction</li>
+<li>✅ 205 EMA Trend Alignment</li>
 
-<li>✅ 205 EMA Alignment</li>
-
-<li>✅ MACD Momentum</li>
+<li>✅ MACD Momentum Confirmation</li>
 
 <li>✅ Stochastic Confirmation</li>
 
@@ -129,7 +219,9 @@ Loading watchlist...
 
 <li>✅ Risk Gauge</li>
 
-<li>✅ Green Ignition System</li>
+<li>✅ Green Ignition System™</li>
+
+<li>✅ Entry / Stop / Target Planning</li>
 
 </ul>
 
@@ -140,16 +232,23 @@ Loading watchlist...
 
 
 
+
+
+<!-- RISK ENGINE -->
+
+
 <section class="module-card">
 
-<h2>⚠️ Risk Engine</h2>
+
+<h2>
+⚠️ RO'Lyfe Risk Engine™
+</h2>
 
 
 <p>
-
-Every trade should define:
-
+Every setup requires:
 </p>
+
 
 
 <ul>
@@ -169,20 +268,64 @@ Every trade should define:
 </ul>
 
 
+
 </section>
+
+
+
+
+
+
+
+<!-- FUTURE CHART AREA -->
+
+
+<section class="module-card">
+
+
+<h2>
+📉 TradingView Chart Terminal
+</h2>
+
+
+<p>
+
+Chart integration coming next.
+
+</p>
+
+
+<div id="chart-terminal">
+
+</div>
+
+
+</section>
+
+
+
+
 
 
 
 
 <footer>
 
+
 <p>
+
 RO'Lyfe Option & Stock Ladder™
+
 <br>
+
 RO'Lyfe Market Intelligence System
+
 </p>
 
+
 </footer>
+
+
 
 
 </div>
@@ -190,11 +333,21 @@ RO'Lyfe Market Intelligence System
 
 
 
-<script src="ladder.js"></script>
+
+
+<!-- ENGINES -->
+
+
+<script src="../../assets/js/clock.js"></script>
+
+<script src="ticker.js"></script>
 
 <script src="scanner.js"></script>
 
 <script src="watchlist.js"></script>
+
+<script src="ladder.js"></script>
+
 
 
 </body>
