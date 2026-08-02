@@ -1,0 +1,53 @@
+{
+  "ticker": [
+    {
+      "symbol": "SPY",
+      "name": "S&P 500 ETF",
+      "price": "",
+      "change": "",
+      "direction": "UP"
+    },
+    {
+      "symbol": "QQQ",
+      "name": "Nasdaq 100 ETF",
+      "price": "",
+      "change": "",
+      "direction": "UP"
+    },
+    {
+      "symbol": "NVDA",
+      "name": "NVIDIA",
+      "price": "",
+      "change": "",
+      "direction": "UP"
+    },
+    {
+      "symbol": "AAPL",
+      "name": "Apple",
+      "price": "",
+      "change": "",
+      "direction": "WATCH"
+    },
+    {
+      "symbol": "AMZN",
+      "name": "Amazon",
+      "price": "",
+      "change": "",
+      "direction": "WATCH"
+    },
+    {
+      "symbol": "BTC",
+      "name": "Bitcoin",
+      "price": "",
+      "change": "",
+      "direction": "WATCH"
+    },
+    {
+      "symbol": "ETH",
+      "name": "Ethereum",
+      "price": "",
+      "change": "",
+      "direction": "WATCH"
+    }
+  ]
+}
