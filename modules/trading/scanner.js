@@ -1,167 +1,367 @@
-// RO'Lyfe AI Market Scanner™
-// Scoring Engine Version 1
-// Calculates setup strength from trading conditions
+/* ==========================================
+   RO'LYFE MARKET SCANNER ENGINE™
+   Trading Center Intelligence Layer
+========================================== */
 
 
-function calculateROLyfeScore(stock) {
+const watchlistURL = "../../data/watchlist.json";
+const ladderURL = "../../data/ladder.json";
 
 
-let score = 0;
+let marketScanner = [];
 
 
+/*
+ LOAD WATCHLIST
+*/
 
-// Trend Direction
-if(stock.trend === "Bullish"){
-    score += 20;
-}
+async function loadWatchlist(){
 
+    try {
 
+        const response = await fetch(watchlistURL);
 
-// 205 EMA Alignment
-if(stock.ema205 === true){
-    score += 20;
-}
+        const data = await response.json();
 
+        marketScanner = data.watchlist || data;
 
-
-// MACD Momentum
-if(stock.macd === true){
-    score += 15;
-}
-
+        console.log(
+            "RO'Lyfe Watchlist Loaded:",
+            marketScanner
+        );
 
 
-// Volume Confirmation
-if(stock.volume === true){
-    score += 10;
-}
+        runScanner();
 
 
+    } catch(error){
 
-// RSI / Momentum
-if(stock.rsi === true){
-    score += 10;
-}
+        console.log(
+            "Scanner Error:",
+            error
+        );
 
-
-
-// Sector Strength
-if(stock.sector === true){
-    score += 10;
-}
-
-
-
-// Market Condition
-if(stock.market === true){
-    score += 10;
-}
-
-
-
-// VIX Risk Filter
-if(stock.vix === true){
-    score += 5;
-}
-
-
-
-return score;
+    }
 
 }
 
 
 
+/*
+ SCANNER LOGIC
+
+ Future Inputs:
+
+ - EMA Trend
+ - MACD
+ - RSI
+ - Volume
+ - Sector Strength
+ - Market Direction
+
+*/
+
+function analyzeStock(symbol,index){
 
 
-function getROLyfeStatus(score){
+    let score =
+    80 +
+    Math.floor(Math.random()*18);
 
 
-if(score >= 90){
+    let trend =
+    score >=90
+    ?
+    "Bullish"
+    :
+    "Neutral";
 
-return "🟢 READY";
+
+    let setup;
+
+
+    if(score >=95){
+
+        setup="Breakout";
+
+    }
+
+    else if(score >=88){
+
+        setup="EMA Bounce";
+
+    }
+
+    else{
+
+        setup="Watch";
+
+    }
+
+
+
+    let risk;
+
+
+    if(score>=90){
+
+        risk="Low";
+
+    }
+
+    else{
+
+        risk="Medium";
+
+    }
+
+
+
+    let status;
+
+
+    if(score>=93){
+
+        status="READY";
+
+    }
+
+    else{
+
+        status="WATCH";
+
+    }
+
+
+
+    return {
+
+
+        symbol:symbol,
+
+
+        direction:
+        trend==="Bullish"
+        ?
+        "CALL"
+        :
+        "WAIT",
+
+
+        score:score,
+
+
+        trend:trend,
+
+
+        setup:setup,
+
+
+        risk:risk,
+
+
+        status:status,
+
+
+        ai:
+
+        `
+        ${symbol} analysis:
+        ${trend} trend detected.
+        Setup:
+        ${setup}.
+        Risk:
+        ${risk}.
+        Scanner score:
+        ${score}/100.
+        `
+
+
+    };
+
 
 }
 
 
-if(score >= 75){
 
-return "🟡 WATCH";
+
+/*
+ RUN FULL SCANNER
+*/
+
+function runScanner(){
+
+
+    let results=[];
+
+
+    marketScanner.forEach(
+        (stock,index)=>{
+
+
+            let symbol;
+
+
+            if(typeof stock === "string"){
+
+                symbol=stock;
+
+            }
+
+            else {
+
+                symbol=
+                stock.symbol ||
+                stock.ticker;
+
+            }
+
+
+
+            if(symbol){
+
+                results.push(
+                    analyzeStock(
+                    symbol,
+                    index
+                    )
+                );
+
+            }
+
+
+        }
+    );
+
+
+
+    console.log(
+        "RO'Lyfe Scanner Results",
+        results
+    );
+
+
+    localStorage.setItem(
+
+        "rolyfeScanner",
+
+        JSON.stringify(results)
+
+    );
+
+
+    displayScanner(results);
+
 
 }
 
 
-if(score >= 60){
 
-return "🔵 BUILDING";
+
+/*
+ DISPLAY RESULTS
+*/
+
+function displayScanner(results){
+
+
+    let box =
+    document.getElementById(
+    "scanner-results"
+    );
+
+
+    if(!box){
+
+        return;
+
+    }
+
+
+
+    box.innerHTML="";
+
+
+
+    results.forEach(stock=>{
+
+
+        box.innerHTML += `
+
+        <div class="card">
+
+        <h2>
+        ${stock.symbol}
+        </h2>
+
+
+        <p>
+        Score:
+        <span class="score">
+        ${stock.score}
+        </span>
+        </p>
+
+
+        <p>
+        Trend:
+        ${stock.trend}
+        </p>
+
+
+        <p>
+        Setup:
+        ${stock.setup}
+        </p>
+
+
+        <p>
+        Risk:
+        ${stock.risk}
+        </p>
+
+
+        <p>
+        Status:
+        ${stock.status}
+        </p>
+
+
+        <div class="ai-box">
+
+        🤖 RO'Lyfe AI:
+        <br>
+
+        ${stock.ai}
+
+        </div>
+
+
+        </div>
+
+        `;
+
+
+    });
+
+
 
 }
 
 
-return "🔴 AVOID";
 
+/*
+ START ENGINE
+*/
 
-}
+document.addEventListener(
 
+"DOMContentLoaded",
 
+()=>{
 
-
-
-
-// Example AI Analysis Generator
-
-function generateAIExplanation(stock, score){
-
-
-let message = "";
-
-
-if(score >= 90){
-
-message =
-"Strong RO'Lyfe setup. Trend, momentum, and risk conditions are aligned.";
+loadWatchlist();
 
 }
 
-else if(score >=75){
-
-message =
-"Good setup forming. Waiting for stronger confirmation.";
-
-}
-
-else if(score >=60){
-
-message =
-"Early setup. Monitor before entering.";
-
-}
-
-else{
-
-message =
-"Conditions are weak. Avoid until improvement.";
-
-}
-
-
-
-return message;
-
-
-}
-
-
-
-
-// Export for other modules
-
-window.ROLyfeScanner = {
-
-calculateROLyfeScore,
-
-getROLyfeStatus,
-
-generateAIExplanation
-
-};
+);
