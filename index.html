@@ -6,9 +6,112 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>RO'Lyfe Command Center™</title>
+<title>
+RO'Lyfe Command Center™
+</title>
 
-<link rel="stylesheet" href="assets/css/styles.css">
+
+<style>
+
+body{
+
+margin:0;
+background:#050816;
+color:white;
+font-family:Arial;
+
+}
+
+
+.container{
+
+padding:20px;
+
+}
+
+
+header{
+
+text-align:center;
+padding:30px;
+
+}
+
+
+h1{
+
+color:#7CFF00;
+
+}
+
+
+.grid{
+
+display:grid;
+grid-template-columns:
+repeat(auto-fit,minmax(250px,1fr));
+
+gap:20px;
+
+}
+
+
+
+.card{
+
+background:#111827;
+
+border-radius:15px;
+
+padding:25px;
+
+border:1px solid #1f2937;
+
+}
+
+
+
+button{
+
+background:#7CFF00;
+
+border:none;
+
+padding:12px;
+
+border-radius:10px;
+
+font-weight:bold;
+
+cursor:pointer;
+
+width:100%;
+
+}
+
+
+
+a{
+
+text-decoration:none;
+
+color:black;
+
+}
+
+
+
+.status{
+
+color:#7CFF00;
+
+font-weight:bold;
+
+}
+
+
+</style>
+
 
 </head>
 
@@ -16,7 +119,7 @@
 <body>
 
 
-<div class="command-center">
+<div class="container">
 
 
 <header>
@@ -25,48 +128,44 @@
 🚀 RO'Lyfe Command Center™
 </h1>
 
+
 <p>
-System Online • Business Intelligence • Real Estate • Funding • Trading • AI
-</p>
-
-<div>
-
-🕒
-<span id="clock">
-Loading...
-</span>
-
+Root Of Lyfe Holdings LLC
 <br>
 
-📅
-<span id="date">
-Loading...
-</span>
+Real Estate • Funding • Trading • AI • Business Intelligence
 
-</div>
+</p>
+
+
+<p class="status">
+SYSTEM ONLINE
+</p>
 
 
 </header>
 
 
 
+<div class="grid">
 
 
-<section class="dashboard">
 
+<div class="card">
 
-<div class="module-card">
-
-<h2>🤖 AI Command Center</h2>
+<h2>
+🤖 AI Intelligence
+</h2>
 
 <p>
-Your intelligent assistant for business, funding, real estate, trading, and system explanations.
+AI explanation engine, business assistant, system guidance.
 </p>
+
 
 <a href="modules/ai/index.html">
 
 <button>
-Enter AI Room
+ENTER AI ROOM
 </button>
 
 </a>
@@ -77,18 +176,22 @@ Enter AI Room
 
 
 
-<div class="module-card">
+<div class="card">
 
-<h2>📈 Trading Center</h2>
+<h2>
+📈 Trading Center
+</h2>
+
 
 <p>
-RO'Lyfe Option & Stock Ladder™, scanners, watchlists, and market intelligence.
+Options ladder, scanners, watchlists, risk engine.
 </p>
+
 
 <a href="modules/trading/index.html">
 
 <button>
-Enter Trading Room
+ENTER TRADING ROOM
 </button>
 
 </a>
@@ -99,40 +202,22 @@ Enter Trading Room
 
 
 
-<div class="module-card">
+<div class="card">
 
-<h2>🧮 Calculator Engine</h2>
+<h2>
+🏠 Property Research
+</h2>
+
 
 <p>
-Funding calculators, deal analysis, risk tools, and decision engines.
+Deals, leads, investor research, property intelligence.
 </p>
 
-<a href="calculators/index.html">
-
-<button>
-Enter Calculator Room
-</button>
-
-</a>
-
-</div>
-
-
-
-
-
-<div class="module-card">
-
-<h2>🏠 Property Research</h2>
-
-<p>
-Property intelligence, lead generation, ownership research, and deal analysis.
-</p>
 
 <a href="property-research/index.html">
 
 <button>
-Enter Property Room
+ENTER PROPERTY ROOM
 </button>
 
 </a>
@@ -143,18 +228,22 @@ Enter Property Room
 
 
 
-<div class="module-card">
+<div class="card">
 
-<h2>💰 Funding Center</h2>
+<h2>
+💰 Funding Machine
+</h2>
+
 
 <p>
-Loan programs, lenders, partnerships, and capital solutions.
+Loan programs, lenders, borrower tools.
 </p>
+
 
 <a href="funding/index.html">
 
 <button>
-Enter Funding Room
+ENTER FUNDING ROOM
 </button>
 
 </a>
@@ -165,18 +254,48 @@ Enter Funding Room
 
 
 
-<div class="module-card">
+<div class="card">
 
-<h2>🌎 Relocation Engine</h2>
+<h2>
+🧮 Calculator Hub
+</h2>
+
 
 <p>
-Relocation incentives, state programs, and opportunity research.
+RO'Lyfe calculators and financial engines.
 </p>
+
+
+<a href="calculators/index.html">
+
+<button>
+ENTER CALCULATORS
+</button>
+
+</a>
+
+</div>
+
+
+
+
+
+<div class="card">
+
+<h2>
+🌎 Relocation
+</h2>
+
+
+<p>
+Relocation programs and opportunity database.
+</p>
+
 
 <a href="relocation/index.html">
 
 <button>
-Enter Relocation Room
+ENTER RELOCATION
 </button>
 
 </a>
@@ -185,36 +304,12 @@ Enter Relocation Room
 
 
 
-</section>
-
-
-
-
-
-<footer>
-
-<h3>
-RO'Lyfe Holdings LLC
-</h3>
-
-<p>
-Rooted in Access. Built for Growth.
-</p>
-
-<p>
-RO'Lyfe Command Center™ Operating System
-</p>
-
-
-</footer>
-
 
 
 </div>
 
 
-
-<script src="assets/js/clock.js"></script>
+</div>
 
 
 </body>
