@@ -46,3 +46,10 @@ An AI provider's response does not automatically reach this dashboard. A service
 - Use explicit authentication and authorization for private events and actions.
 - Treat provider HTTP success as transport success, not proof that correct data rendered in the UI.
 - Never label a service "live" until its response and user-visible behavior are tested.
+
+## Shared Property Research Dock
+
+This project loads the reusable RO’Lyfe Property Research Dock from the canonical property research site. It links to the same address-targeted research sources for listing/comps, tax sales/auctions, parcel and official property/tax research, flood maps, capital routes, and closing documents. The dock opens provider pages and web searches; it does not scrape or import verified listing, title, lien, tax, or comp data.
+
+Shared workflow standard: https://github.com/ROLRichman/rolyfe-property-research-intelligence/blob/main/PROPERTY_RESEARCH_STANDARD.md
+Shared component: https://github.com/ROLRichman/rolyfe-property-research-intelligence/blob/main/shared/property-research-dock.js
