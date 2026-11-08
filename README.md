@@ -1,17 +1,18 @@
 # RO’Lyfe Master Hub™
 
-The central public entrance to the RO’Lyfe ecosystem. This mobile-first GitHub Pages site organizes independent RO’Lyfe platforms into four clear departments without merging their repositories, code, data, or deployments.
+The central public entrance to the RO’Lyfe ecosystem. This mobile-first GitHub Pages site organizes independent RO’Lyfe platforms into five clear departments without merging their repositories, code, data, or deployments.
 
 ## Public website
 
 https://rolrichman.github.io/rolyfe-command-center/
 
-## Four department front doors
+## Five department front doors
 
-1. **Funding & Real Estate** — RO’Lyfe Funding & Execution Hub, business funding resources, property research, Auction Capital Machine, and contract documents.
-2. **Trading & Markets** — ROlyfe Trading Calculator Pro is the primary front door. Chart Wars and Scanner Hub remain sections within that product; the Trading Intelligence Classroom and Tactical Intelligence Center remain separate specialist platforms.
-3. **Education & Family Wealth** — Family Wealth Academy and the RO’Lyfe learning/video resources.
-4. **Entertainment** — RO’Lyfe Entertainment Network, Live Sports Center, Pool, and eGaming.
+1. **Funding & Real Estate** — Funding Hub, business funding resources, Property Research, Acquisition Engine, Auction Capital Machine, Deal Terminal, Relocation Intelligence, and Contract & Document Hub.
+2. **Trading & Markets** — Trading Calculator Pro is the primary front door. Chart Wars and Scanner Hub remain sections within that product; Trading Intelligence Classroom and Tactical Intelligence Center remain separate specialist platforms.
+3. **Education & Family Wealth** — Family Wealth Academy and Vision / Learning Hub.
+4. **Sports & Media** — Live Sports Center and Entertainment Network. The Vision Hub is linked as a learning destination; full video-library enhancements remain in progress.
+5. **Games & Experiences** — RO’Lyfe Gaming and the Pool prototype. Orbital Blitz and Ping Pong are identified as in-development projects, not released game features.
 
 ## Project boundaries
 
