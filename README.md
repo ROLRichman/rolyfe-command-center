@@ -12,7 +12,7 @@ https://rolrichman.github.io/rolyfe-command-center/
 2. **Trading & Markets** — Trading Calculator Pro is the primary front door. Chart Wars and Scanner Hub remain sections within that product; Trading Intelligence Classroom and Tactical Intelligence Center remain separate specialist platforms.
 3. **Education & Family Wealth** — Family Wealth Academy and Vision / Learning Hub.
 4. **Sports & Media** — Live Sports Center and Entertainment Network. The Vision Hub is linked as a learning destination; full video-library enhancements remain in progress.
-5. **Games & Experiences** — RO’Lyfe Gaming and the Pool prototype. Orbital Blitz and Ping Pong are identified as in-development projects, not released game features.
+5. **Games & Experiences** — RO’Lyfe Gaming and its playable Pool room (`/games/pool/`). Orbital Blitz and Ping Pong are identified as in-development projects, not released game features.
 
 ## Project boundaries
 
